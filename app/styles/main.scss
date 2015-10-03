@@ -1,10 +1,5 @@
 // bower:scss
 // endbower
-
-
-
-
-
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -15,7 +10,6 @@
 body {
   padding: 0;
   background: -webkit-linear-gradient(left, #00A1D2, #35B7DD)
-
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -28,9 +22,7 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
     margin-top: 0;
@@ -38,17 +30,61 @@ body {
     line-height: 40px;
     padding-bottom: 19px;
   }
+  a.bvl_logo {
+    display: block;
+    background: url('../images/spritesheet1-comprs.png');
+    height: 52px;
+    width: 248px;
+    background-position:0px 0px;
+    margin:12px 0;
+  }
+  .onestop {
+    padding-top:28px;
+  }
+  .questions {
+    padding-top:26px;
+  }
+
+}
+.left {
+  float:left;
+}
+.right {
+  float:right;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  min-height: 87px;
+  border-radius:0px;
 }
 
 .navbar-default {
   background-color: white;
 }
 
+.form_main {
+  width:408px;
+}
+
+.moving_people {
+  background:url('../images/spritesheet1-comprs.png');
+  height:350px;
+  width: 432px;
+  background-position: 0 350px;
+}
+
+.how_it_works {
+  background-color: #36B4DA;
+  height:188px;
+}
+
+
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+
 }
 
 .container-narrow > hr {
@@ -76,9 +112,9 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .container {
-    max-width: 730px;
+    max-width: 986px;
   }
 
   /* Remove the padding we set earlier */
