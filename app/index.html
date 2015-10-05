@@ -38,20 +38,36 @@
     </div>
 
     <div class="container">
-      <div class="main">
-        <h1>Moving Price Calculator</h1>
-        <h2>Rates as low as $999</h2>
-      </div>
-      <div ng-include="'views/slide1.html'" ng-controller="MainCtrl"></div>
+    <section>
+  <div class="form_main left">
+    <h1>Moving Price Calculator</h1>
+    <h2>Rates as low as $999</h2>
+    <form>
+      <div class="box basic"></div>
+       <div class="step1">
+          <label>Where are you moving from?</label>
+          <input type='tel' placeholder="ZIP Code" />
+          <button class="ziphelp_btn zip_position">ZIP Help</button>
+          <div class="calculate">
+            <button class="submit">Calculate</button>
+          </div>
+        </div>
+    </form>
+    <div class="trusted_partners">
+      <a href="#"><div class="sprite infoImg"></div></a>
+      <a href="#"><div class="sprite bbbImg"></div></a>
+      <a href="#"><div class="sprite nortonImg"></div></a>
+      <a href="#"><div class="sprite lockImg"></div></a>
+      <div class="privacy_policy"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+
+  <div class="moving_people"></div>
+</section>
+
+
     </div>
     
-    <div class="container">
-      <div ng-include="'views/slide2.html'" ng-controller="MainCtrl"></div>
-    </div>
-    
-    <div class="container">
-      <div ng-include="'views/slide3.html'" ng-controller="MainCtrl"></div>
-    </div>
     
      <div class="how_it_works">
       <div class="container">
