@@ -39,7 +39,7 @@
     color: #35CEFC;
     padding-top:20px;
     font-size:14px;
-    font-family: 'Source Sans Pro';
+    font-family: 'Roboto';
     a {
       font-family: 'Arial';
       display: block;
@@ -58,5 +58,20 @@
     background-color: white;
   }
 }
-
-
+h1, h2 {
+  font-weight:300;
+  color:white;
+}
+h1 {
+  font-size:46px; 
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+}
+.main {
+  width: 500px;
+  display: none;
+}

@@ -38,6 +38,10 @@
     </div>
 
     <div class="container">
+      <div class="main">
+        <h1>Moving Price Calculator</h1>
+        <h2>Rates as low as $999</h2>
+      </div>
       <div ng-include="'views/slide1.html'" ng-controller="MainCtrl"></div>
     </div>
     
@@ -51,13 +55,34 @@
     
      <div class="how_it_works">
       <div class="container">
-        <div ng-include="'views/how.html'" ng-controller="HowCtrl"></div>
+      <div>
+        <h4>How It Works?</h4>
+        <div>
+          <ol>
+            <li>
+              <div class="sprite howImg checkImg"></div>
+              <div>1. Enter move details</div>
+            </li>
+            <li>
+              <div class="sprite howImg costImg"></div>
+              <div>2. View estimated cost</div>
+              
+            </li>
+            <li>
+              <div class="sprite howImg quoteImg"></div>
+              <div>3. Get quote from movers</div>
+            </li>
+          </ol>
+        </div>
+      </div>
       </div>
     </div>
 
     <div class="disclaimer">
       <div class="container">
-        <div ng-include="'views/disclaimer.html'" ng-controller="DiscCtrl"></div>
+      <div>
+        <p>*<span>Disclaimer:</span> Once submitting a quote request on BudgetVanLines.com, based on your search criteria, our system will match you with licensed third party companies that can service your route.  Budget Van Lines Inc, a federally licensed moving broker, could also be one of the companies competing for your business.  Budget Van Lines is not a motor carrier and does not own moving trucks.  Budget Van Lines will generate a quote for you based on the details of your intended move, as well as the availability of licensed motor carriers in Budget Van Lines' network.</p>
+      </div>
       </div>
     </div>
 
