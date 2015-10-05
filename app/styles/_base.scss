@@ -1,0 +1,100 @@
+// base.scss
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,300italic,300,700);
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+a {
+  text-decoration:none;
+}
+
+
+body {
+  padding: 0;
+  background: -webkit-linear-gradient(left, #00A1D2, #35B7DD);
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.sprite {
+  background:url('../images/spritesheet1-comprs.png');
+}
+
+
+.container {
+  width:950px;
+  margin:0 auto;
+}
+
+.box {
+  border-radius: 10px;
+}
+.box.basic {
+  background-color: #89CFE7;
+}
+.baseInpBtn {
+   border-radius:4px;
+   padding:10px 25px;
+   border:0;
+}
+
+input {
+  @extend .baseInpBtn; 
+  line-height:30px;
+}
+
+@mixin placeholder($fontSize:15px){
+  ::-webkit-input-placeholder {
+      font-size: $fontSize;
+      text-overflow: ellipsis;
+  }  
+  :-moz-placeholder { /* Firefox 18- */
+      font-size: $fontSize;
+      text-overflow: ellipsis;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+      font-size: $fontSize;
+      text-overflow: ellipsis;
+  }
+  :-ms-input-placeholder {
+      font-size: $fontSize;
+      text-overflow: ellipsis;
+  }
+}
+
+@include placeholder();
+
+.submit {
+  width: 215px;
+  height: 50px;
+  background-color: #FF9635;
+  color: white;
+  font-family: 'Source Sans Pro';
+  font-size: 20px;
+  font-weight: 700;
+  border-radius:4px;
+  border:0;
+  box-shadow: 0px 2px 0px #999;
+}
+
+
+.activeBtn {
+  box-shadow: inset 1px 1px 10px #999;
+}
+.submit:active {
+  @extend .activeBtn;
+}
+
+
+.left {
+  float:left;
+}
+.right {
+  float:right;
+}
+

@@ -1,0 +1,62 @@
+// header.scss
+
+
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  margin-bottom: 10px;
+  padding-left:0px;
+  padding-right:0px;
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+  a.bvl_logo {
+    display: block;
+    background: url('../images/spritesheet1-comprs.png');
+    height: 52px;
+    width: 248px;
+    background-position:0px 0px;
+    margin:12px 0;
+  }
+  .onestop {
+    padding-top:36px;
+    font-size: 14px;
+    padding-left:20px;
+    font-style: italic;
+    color:#809BA6;
+  }
+  .questions {
+    color: #35CEFC;
+    padding-top:20px;
+    font-size:14px;
+    font-family: 'Source Sans Pro';
+    a {
+      font-family: 'Arial';
+      display: block;
+      padding-top: 5px;
+      color: #90A4AE;
+      font-size:23px;
+    }
+  }
+
+  .navbar {
+    margin-bottom: 0px;
+    min-height: 87px;
+  }
+
+  .navbar-default {
+    background-color: white;
+  }
+}
+
+

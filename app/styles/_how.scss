@@ -1,0 +1,39 @@
+.how_it_works {
+	clear:both;
+  	background-color: #36B4DA;
+	padding-top:20px;
+	padding-bottom:32px;
+	color: #B5E2F0;
+	h4 {
+		font-size:24px;
+		text-align: center;
+		margin-bottom:35px;
+	}
+	ol li {
+		width: 33%;
+		text-align:center;
+		display: inline-block;
+
+	}
+	.howImg {
+		margin:0 auto;
+	}
+	.checkImg {
+		height:55px;
+		width:48px;
+	    background-position-x: 233px;
+	    background-position-y: -50px;
+	}
+	.costImg {
+		height: 55px;
+	    width: 60px;
+	    background-position-x: 182px;
+	    background-position-y: -50px;
+	}
+	.quoteImg {
+	    height: 55px;
+	    width: 48px;
+	    background-position-x: 114px;
+	    background-position-y: -50px;
+	}
+}

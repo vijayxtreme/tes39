@@ -1,0 +1,35 @@
+
+.disclaimer {
+	color: #3FB5DE;
+	font-family: 'Helvetica Neue';
+	font-size: 13px;
+	line-height:1.5em;
+	padding-top:20px;
+	text-align:	justify;
+
+	span {
+		font-weight: 900;
+	}
+}
+
+.footer {
+  padding-top: 39px;
+  text-align: center;
+  color: #C3E5FE;
+  font-family: 'Helvetica Neue';
+  font-size: 12px;
+   a {
+	   	color: #C3E5FE;
+	   	font-weight: 700;
+	   	letter-spacing: 0.05em;
+   }
+   .copyright {
+   		margin-top:8px;
+   		font-size:11px;
+   }
+   .copyright a {
+	   	font-weight: 200;
+	   	letter-spacing: initial;
+   }
+
+}
