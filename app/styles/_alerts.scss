@@ -1,0 +1,15 @@
+//Validation errors, alerts, etc
+
+
+input.error {
+   border:3px solid red;
+}
+
+#zip-error {
+	position: absolute;
+    top: -18px;
+    right: 0;
+    background-color: #F2DEDE;
+    padding:10px;
+    border-radius:4px;
+}

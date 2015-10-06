@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('bvl39App', ['ngResource', 'ngRoute'])
+  .module('bvl39App', ['ngResource', 'ngRoute', 'ngValidate'])
 
   .config(function($routeProvider){
   	$routeProvider
