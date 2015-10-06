@@ -1,15 +1,15 @@
-<section>
+<section id="slide1">
   <div class="form_main left">
     <h1>Moving Price Calculator</h1>
     <h2>Rates as low as $999</h2>
     <form>
       <div class="box basic"></div>
-       <div class="step1">
+       <div class="step">
           <label>Where are you moving from?</label>
-          <input type='tel' placeholder="ZIP Code" />
+          <input type='tel' placeholder="Enter ZIP" />
           <button class="ziphelp_btn zip_position">ZIP Help</button>
           <div class="calculate">
-            <button class="submit">Calculate</button>
+            <button class="submit" ng-click="next('step2')">Calculate</button>
           </div>
         </div>
     </form>

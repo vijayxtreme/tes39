@@ -1,0 +1,77 @@
+//slide3.scss
+
+@import 'slide';
+
+section#slide3 {
+	h2, h3 {
+		font-weight:300;
+		color:white;
+	}
+	h2 {
+		font-size:42px;	
+		margin-bottom: 15px;
+	}
+	h3 {
+		padding-left:20px;
+		padding-right:20px;
+		position: relative;
+		left:10px;
+	    font-size: 20px;
+	    line-height: 28px;
+	    font-weight: 500;
+	    text-align: center;
+	    margin-bottom: 25px;
+	}
+	.form_main {
+		.box {
+			height:292px;
+		}
+		.step {
+
+			.calculate {
+				padding-left: 100px;
+    			padding-top: 10px;
+			}
+
+
+			.input_area {
+				margin-bottom:10px;
+				input {
+					left:87px;
+					width:216px;
+				}
+				.name {
+					width: 80px;
+				}
+				.name.space {
+					margin-right:4px;
+				}
+				#first_name {
+
+				}
+				#last_name {
+
+				}
+				#email {
+					left:79px;
+				}
+				#phone {
+					left:73px;
+				}
+			}
+		}
+	}
+
+	.trusted_partners {
+		padding-top:300px;
+	}
+
+	.google_map {
+		position: relative;
+		height: 288px;
+		width:465px;
+		background: #ccc;
+		border:2px solid white;
+		left: 513px;
+	}
+}

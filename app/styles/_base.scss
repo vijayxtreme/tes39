@@ -27,6 +27,7 @@ body {
 
 
 .container {
+  clear:both;
   width:950px;
   margin:0 auto;
 }
@@ -41,7 +42,16 @@ body {
    border-radius:4px;
    padding:12px 24px;
    border:0;
+
 }
+.baseZipHelp {
+  border-radius:4px;
+  padding: 15px 24px;
+  background-color: #1A5A8C;
+  border: 1px solid #005388;
+  color: #6DA4F1;
+}
+
 
 input {
   @extend .baseInpBtn; 

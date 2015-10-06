@@ -11,6 +11,6 @@ angular.module('bvl39App')
   .controller('DiscCtrl', function () {
   	this.hello = function(){
   		console.log('hello');
-  	}
+  	};
   	this.hello();
   });

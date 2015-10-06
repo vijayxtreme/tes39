@@ -1,7 +1,8 @@
 //slide1.scss
 
-section {
-	padding-top:13px;
+@import 'slide';
+
+section#slide1 {
 
 	h1, h2 {
 		font-weight:300;
@@ -18,102 +19,27 @@ section {
 	    margin-bottom: 25px;
 	}
 	.form_main {
-		width:500px;
-		position:relative;
 
-		.box {
-			position:absolute;
-			width: 100%;
-			height: 172px;
-			z-index: 2;
-			opacity: 0.8;
-		}
-		.step1 {
-			position: absolute;
-			z-index: 3;
-			opacity: 1;  
-			padding:20px 35px;
+		.step {
+			
 
 			.calculate {
 				padding-left:100px;
 				padding-top:22px;
 			}
-			input {
-				position: relative;
-				left: 10px;
-				width: 166px;
-			}
-			label {
-				color: #18529D;	
-				position:relative;
+			
+			label{
 				top:4px;
 			}
-			.ziphelp_btn {
-				@extend .baseInpBtn;
-			    padding: 15px 24px;
-				background-color: #1A5A8C;
-				border: 1px solid #005388;
-				color: #6DA4F1;
-			}
-			.ziphelp_btn:active {
-				@extend .activeBtn;
-			}
-
+			
 			.zip_position {
 				position: absolute;
 			    top: 22px;
 			    left: 382px;
-			    padding-left: 12px;
-			    padding-right: 12px;
-			    font-size: 14px;
-			    z-index: 4;
+			    
 			}
 
 		}
-		.trusted_partners {
-			padding-top:174px;
-			padding-left:50px;
-
-			
-			div {
-				margin-top:10px;
-				margin-bottom: 20px;
-				float:left;
-				font-size:11px;
-				color: #B5E2F0;		
-				a {
-					color: #B5E2F0;
-				}
-			}
-			.infoImg {
-			    height: 35px;
-			    width: 33px;
-			    background-position: 0px -50px;
-			}
-			.bbbImg {
-			    height: 35px;
-			    width: 55px;
-   			    margin-left:26px;
-			    background-position: -35px -50px;
-			}
-			.nortonImg {
-			    height: 35px;
-			    width: 58px;
-			    margin-left:26px;
-			    background-position: -95px -52px;			
-			}
-			.lockImg {
-			    height: 35px;
-			    width: 36px;
-			    margin-left:26px;
-			    background-position: -158px -52px;			
-			}
-			.privacy_policy {
-				position: relative;
-				top: 15px;
-			}
-		}
-
 	}
 
 	.moving_people {

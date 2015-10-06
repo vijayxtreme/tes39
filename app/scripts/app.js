@@ -9,6 +9,23 @@
  * Main module of the application.
  */
 angular
-  .module('bvl39App', []);
+  .module('bvl39App', ['ngResource', 'ngRoute'])
+
+  .config(function($routeProvider){
+  	$routeProvider
+  	.when('/', {
+  		templateUrl: 'views/slide1.html',
+  		controller:  'slide1Ctrl'
+  	})
+  	.when('/step2', {
+  		templateUrl: 'views/slide2.html',
+  		controller: 'slide2Ctrl'
+  	})
+  	.when('/step3', {
+  		templateUrl: 'views/slide3.html',
+  		controller: 'slide3Ctrl'
+  	});
+
+  });
 
 

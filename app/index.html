@@ -20,11 +20,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header" ng-controller="MainCtrl">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="left">
-          <a class="bvl_logo" href="#"></a>
+          <a class="bvl_logo" href="#/"></a>
           </div>
           <div class="onestop left">
             <span>Your one stop shop for finding movers</span>
@@ -38,15 +38,7 @@
     </div>
 
     <div class="container">
-      <div ng-include="'views/slide1.html'" ng-controller="MainCtrl"></div>
-    </div>
-    
-    <div class="container">
-      <div ng-include="'views/slide2.html'" ng-controller="MainCtrl"></div>
-    </div>
-    
-    <div class="container">
-      <div ng-include="'views/slide3.html'" ng-controller="MainCtrl"></div>
+     <div ng-view></div>
     </div>
     
      <div class="how_it_works">
@@ -85,12 +77,17 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/step1.js"></script>
+        <script src="scripts/controllers/step2.js"></script>
+        <script src="scripts/controllers/step3.js"></script>
         <script src="scripts/controllers/how.js"></script>
         <script src="scripts/controllers/disc.js"></script>
         <!-- endbuild -->

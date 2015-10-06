@@ -1,0 +1,59 @@
+//slide2.scss
+
+@import 'slide';
+
+section#slide2 {
+	
+	.form_main {
+		.box {
+			height:297px;
+		}
+		.step {
+			.calculate {
+				padding-left: 100px;
+    			padding-top: 10px;
+			}
+		}
+
+		.input_area {
+			position:relative;
+			margin-bottom:10px;
+
+			input {
+				left:29px;
+			}
+			.zip_position {
+				position: absolute;
+				top: 2px;
+				left: 346px;
+			}
+
+			#to_zip {
+
+			}
+
+			#move_date {
+				left:35px;
+			}
+
+			#move_size {
+				left:39px;
+			}
+
+		}
+	}
+	.trusted_partners {
+		padding-top:300px;
+	}
+
+	.country_map {
+		background: url("../images/spritesheet1-comprs.png");
+		height: 254px;
+		width: 432px;
+		position: relative;
+		left: 513px;
+		top: 30px;
+		background-position: 448px 595px;
+	}
+
+}
