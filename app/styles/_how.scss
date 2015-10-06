@@ -1,18 +1,23 @@
 .how_it_works {
 	clear:both;
-  	background-color: #36B4DA;
+  	background-color: #5EB2DB;
 	padding-top:20px;
-	padding-bottom:32px;
+	padding-bottom:30px;
 	color: #B5E2F0;
 	h4 {
-		font-size:24px;
+		font-size:20px;
 		text-align: center;
 		margin-bottom:35px;
+		font-weight: 500;
 	}
 	ol li {
 		width: 33%;
 		text-align:center;
 		display: inline-block;
+		font-size: 12px;
+		div {
+			padding-top:5px;
+		}
 
 	}
 	.howImg {

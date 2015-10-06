@@ -38,67 +38,26 @@
     </div>
 
     <div class="container">
-    <section>
-  <div class="form_main left">
-    <h1>Moving Price Calculator</h1>
-    <h2>Rates as low as $999</h2>
-    <form>
-      <div class="box basic"></div>
-       <div class="step1">
-          <label>Where are you moving from?</label>
-          <input type='tel' placeholder="ZIP Code" />
-          <button class="ziphelp_btn zip_position">ZIP Help</button>
-          <div class="calculate">
-            <button class="submit">Calculate</button>
-          </div>
-        </div>
-    </form>
-    <div class="trusted_partners">
-      <a href="#"><div class="sprite infoImg"></div></a>
-      <a href="#"><div class="sprite bbbImg"></div></a>
-      <a href="#"><div class="sprite nortonImg"></div></a>
-      <a href="#"><div class="sprite lockImg"></div></a>
-      <div class="privacy_policy"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></div>
-    </div>
-  </div>
-
-  <div class="moving_people"></div>
-</section>
-
-
+      <div ng-include="'views/slide1.html'" ng-controller="MainCtrl"></div>
     </div>
     
+    <div class="container">
+      <div ng-include="'views/slide2.html'" ng-controller="MainCtrl"></div>
+    </div>
+    
+    <div class="container">
+      <div ng-include="'views/slide3.html'" ng-controller="MainCtrl"></div>
+    </div>
     
      <div class="how_it_works">
       <div class="container">
-      <div>
-        <h4>How It Works?</h4>
-        <div>
-          <ol>
-            <li>
-              <div class="sprite howImg checkImg"></div>
-              <div>1. Enter move details</div>
-            </li>
-            <li>
-              <div class="sprite howImg costImg"></div>
-              <div>2. View estimated cost</div>
-              
-            </li>
-            <li>
-              <div class="sprite howImg quoteImg"></div>
-              <div>3. Get quote from movers</div>
-            </li>
-          </ol>
-        </div>
-      </div>
+       <div ng-include="'views/how.html'" ng-controller="HowCtrl"></div>
       </div>
     </div>
 
     <div class="disclaimer">
       <div class="container">
-      <div>
-        <p>*<span>Disclaimer:</span> Once submitting a quote request on BudgetVanLines.com, based on your search criteria, our system will match you with licensed third party companies that can service your route.  Budget Van Lines Inc, a federally licensed moving broker, could also be one of the companies competing for your business.  Budget Van Lines is not a motor carrier and does not own moving trucks.  Budget Van Lines will generate a quote for you based on the details of your intended move, as well as the availability of licensed motor carriers in Budget Van Lines' network.</p>
-      </div>
+      <div ng-include="'views/disclaimer.html'" ng-controller="DiscCtrl"></div>
       </div>
     </div>
 
