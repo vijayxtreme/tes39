@@ -5,11 +5,41 @@ input.error {
    border:3px solid red;
 }
 
-#zip-error {
+#from_zip-error, #to_zip-error, #move_date-error, #move_size-error {
 	position: absolute;
     top: -18px;
     right: 0;
     background-color: #F2DEDE;
     padding:10px;
     border-radius:4px;
+    z-index: 10;
+    margin-bottom: 10px;
+}
+#first_name-error, #last_name-error, #email-error, #phone-error {
+	position: absolute;
+    background-color: #F2DEDE;
+    padding:10px;
+    border-radius:4px;
+    z-index: 10;
+    margin-bottom: 10px;
+}
+
+#first_name-error {
+	top: 10px;
+	left: 10px;
+}
+
+#last_name-error {
+	top: 10px;
+	right: -74px;
+}
+
+#email-error {
+	left: 10px;
+	top: 80px;
+}
+
+#phone-error {
+	left: 10px;
+	top: 150px;	
 }

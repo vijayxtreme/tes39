@@ -1,27 +1,26 @@
 <section id="slide2">
   <div class="form_main left">
-      <form>
+      <form ng-validate="validationOptions">
       <div class="box basic"></div>
        <div class="step">
          <div class="input_area">
             <label>Where are you moving to?</label>
-            <input id="to_zip" type='tel' placeholder="ZIP Code" />
-            <button class="ziphelp_btn zip_position">ZIP Help</button>
+            <input name="to_zip" id="to_zip" type='tel' placeholder="ZIP Code" />
+            <button class="ziphelp_btn zip_position" ng-click="zipHelp($event)">ZIP Help</button>
           </div>
 
           <div class="input_area">
             <label>When is your move date?</label>
-            <input id="move_date" type='tel' placeholder="ZIP Code" />
-            <button class="ziphelp_btn zip_position">ZIP Help</button>
+            <input name="move_date" id="move_date" type='tel' placeholder="Move Date" />
+            <button class="ziphelp_btn zip_position" ng-click="calHelp($event)">Calendar</button>
           </div>
           <div class="input_area">
             <label>How large is your move?</label>
-            <input id="move_size" type='tel' placeholder="ZIP Code" />
-            <button class="ziphelp_btn zip_position">ZIP Help</button>
+            <input name="move_size" id="move_size" type='tel' placeholder="Move Size" />
           </div>
 
           <div class="calculate">
-            <button ng-click="next('step3')" class="submit">Calculate</button>
+            <button type="submit" class="submit">Calculate</button>
           </div>
         </div>
     </form>

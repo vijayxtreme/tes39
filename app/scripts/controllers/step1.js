@@ -12,14 +12,14 @@ angular.module('bvl39App')
  	
   	$scope.validationOptions = {
   		rules: {
-  			zip: {
+  			from_zip: {
   				required: true,
   				minlength: 5,
   				maxlength: 5
   			}
   		}, 
   		messages: {
-  			zip: {
+  			from_zip: {
   				required: "Please enter in your zip code correctly",
   				minlength: "Must be 5 digits",
   				maxlength: "Cannot be more than 5 digits"
@@ -33,9 +33,10 @@ angular.module('bvl39App')
   		}
   	};
 
-  	$scope.zipHelp = function($event){
-  		$event.preventDefault();
-  		window.alert('zip HELP!');
-  	};
+    $scope.zipHelp = function($event){
+      $event.preventDefault();
+      window.alert('zip HELP!');
+    };
+
 
  }]);

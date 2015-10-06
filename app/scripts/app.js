@@ -24,7 +24,11 @@ angular
   	.when('/step3', {
   		templateUrl: 'views/slide3.html',
   		controller: 'slide3Ctrl'
-  	});
+  	})
+    .when('/thank-you', {
+      templateUrl: 'views/thank-you.html',
+      controller: 'thankYouCtrl'
+    });
 
   });
 
