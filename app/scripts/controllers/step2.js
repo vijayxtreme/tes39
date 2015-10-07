@@ -47,13 +47,15 @@ angular.module('bvl39App')
 
   	$scope.zipHelp = function($event){
   		$event.preventDefault();
-  		window.alert("Hello world");
+  		
+      
+
 
   	};
  	
     $scope.calHelp = function($event){
       $event.preventDefault();
-      window.alert('Calendar!');
+      angular.element('#move_date').datepicker('show');
     };
 
 

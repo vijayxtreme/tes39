@@ -23,8 +23,8 @@ angular.module('bvl39App')
   			},
   			phone: {
   				required: true,
-  				minlength:10,
-  				maxlength:10
+  				minlength:14,
+  				maxlength:14
   			}
 
   		}, 

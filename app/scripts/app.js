@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('bvl39App', ['ngResource', 'ngRoute', 'ngValidate'])
+  .module('bvl39App', ['ngResource', 'ngRoute', 'ngValidate', 'slick', 'ngMask'])
 
   .config(function($routeProvider){
   	$routeProvider
@@ -30,6 +30,31 @@ angular
       controller: 'thankYouCtrl'
     });
 
-  });
+  })
 
+  .directive('jqdatepicker', function () {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+         link: function (scope, element, attrs, ngModelCtrl) {
+            element.datepicker({
+                dateFormat: 'mm/dd/yy',
+                onSelect: function (date) {
+                    scope.date = date;
+                    scope.$apply();
+                }
+            });
+        }
+    };
+  })
 
+  .directive('ziphelp', function(){
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs){
+          var zh = new Ziphelp(element);
+          zh.toggle();
+      }
+
+    };
+  })
