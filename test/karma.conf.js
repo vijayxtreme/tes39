@@ -29,8 +29,6 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/jquery-validation/dist/jquery.validate.js',
       'bower_components/jpkleemans-angular-validate/dist/angular-validate.min.js',
-      'bower_components/slick-carousel/slick/slick.min.js',
-      'bower_components/angular-slick/dist/slick.js',
       'bower_components/ngMask/dist/ngMask.js',
       'bower_components/jquery-ui/ui/minified/datepicker.min.js',
       'bower_components/angular-mocks/angular-mocks.js',

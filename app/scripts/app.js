@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('bvl39App', ['ngResource', 'ngRoute', 'ngValidate', 'slick', 'ngMask'])
+  .module('bvl39App', ['ngResource', 'ngRoute', 'ngValidate', 'ngMask'])
 
   .config(function($routeProvider){
   	$routeProvider
@@ -47,14 +47,13 @@ angular
         }
     };
   })
-
+//directives can use custom templates
   .directive('ziphelp', function(){
     return {
       restrict: 'A',
       link: function(scope, element, attrs){
-          var zh = new Ziphelp(element);
-          zh.toggle();
+           var zh = new Ziphelp(element);
+           zh.toggle();
       }
-
     };
-  })
+  });

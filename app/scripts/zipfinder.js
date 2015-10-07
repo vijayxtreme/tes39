@@ -2,28 +2,43 @@
 
 var Ziphelp = function(element){
 
-	this.zf = document.createElement('div'),
-	this.zf.classList.add('zipfinder'),
-	this.zf.isClicked = false;
+	var $ = angular.element;
 
 	this.elem = element[0];
-	
+	this.par = this.elem.parentNode;
+	this.input = $(this.par).find('input');
+
+	this.zf = document.createElement('div');
+	this.zf.classList.add('zipfinder');
+
+	//ZipFinder clicked?
+	this.zf.isClicked = false;
+
 	//Init
-	this.elem.parentNode.appendChild(this.zf);
+	this.par.appendChild(this.zf);
    
 };
 
 Ziphelp.prototype.toggle = function(){
-	var zf = this.zf;
 
 	this.elem.addEventListener('click', function(event){
 		event.preventDefault();
-	    if(zf.isClicked) {
-	      zf.style.display = 'none';
-	      zf.isClicked = false;
+
+	    if(this.zf.isClicked) {
+	      this.zf.style.display = 'none';
+	      this.zf.isClicked = false;
 	    }else {
-	      zf.style.display = 'block';
-	      zf.isClicked = true;
+	      this.zf.style.display = 'block';
+	      this.zf.isClicked = true;
 	    }
-	});
+	}.bind(this));
 };
+
+Ziphelp.prototype.getValue = function(){
+	return this.input.val();
+};
+
+Ziphelp.prototype.setValue = function(value){
+	this.input.val(value);
+};
+
