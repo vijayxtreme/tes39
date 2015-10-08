@@ -1,15 +1,38 @@
 //zipfinder scss
 
 .zipfinder {
-	height: 214px;
-    width: 260px;
-    border: 1px solid white;
-    box-shadow: 1px 1px 10px #999; 
-    background-color: #999;
+    height: 65px;
+    width: 300px;
+    box-shadow: 1px 1px 10px #999;
+    background-color: #35578E;
     position: absolute;
     z-index: 10;
-    top: -75px; /* default */
-    right: -105px; /* default */
-    display:none;
+    border-radius: 8px;
+    top: -13px;
+    right: 169px;
+    display: none;
+    color: white;
+    padding: 15px;
 
+
+    .zip-arrow {
+        height:0px;
+        padding:0px;
+        width:0px;
+        z-index: 11;
+        position:absolute;
+        top: 27px;
+        left:330px;
+        border-top: 20px solid transparent;
+        border-left: 20px solid #35578E;
+        border-bottom: 20px solid transparent;
+    }
+
+    .close {
+        position: absolute;
+        z-index:12;
+        top: 10px;
+        left: 310px;
+        cursor:pointer;
+    }
 }

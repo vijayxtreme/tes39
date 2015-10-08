@@ -8,8 +8,8 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', function ($scope, $location, $rootScope) {
- 	
+  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', function ($scope, $location, $rootScope, $http) {
+
   	$scope.validationOptions = {
   		rules: {
   			from_zip: {
@@ -27,16 +27,21 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
+        // $http.get('/validate/validate/')
+        //   .success(function(data){
+        //       console.log(data);
+
+        //       $scope.city = data.city.name;
+
+        //   })
+        //   .error(function(err){
+        //     console.log(err);
+        //   });
+
   			$rootScope.$apply(function(){
   				$location.path('step2');
   			});
   		}
   	};
-
-    $scope.zipHelp = function($event){
-      $event.preventDefault();
-      window.alert('zip HELP!');
-    };
-
-
- }]);
+   
+  }]);

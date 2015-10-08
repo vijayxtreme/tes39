@@ -3,35 +3,44 @@
 var Ziphelp = function(element){
 
 	var $ = angular.element;
+	var self = this;
 
-	this.elem = element[0];
-	this.par = this.elem.parentNode;
+	this.zf = element[0];
+	this.par = this.zf.parentNode;
 	this.input = $(this.par).find('input');
-
-	this.zf = document.createElement('div');
-	this.zf.classList.add('zipfinder');
+	this.close = $(this.par).find('.close')[0];
+	console.log(this.close);
 
 	//ZipFinder clicked?
 	this.zf.isClicked = false;
 
-	//Init
-	this.par.appendChild(this.zf);
-   
+	this.close.addEventListener('click', function(){
+		this.zf.style.display="none";
+		this.zf.isClicked = false;
+	}.bind(this));
+
+	$(document).mouseup(function (e)
+	{
+	    var container = $(self.zf);
+
+	    if (!container.is(e.target) // if the target of the click isn't the container...
+	        && container.has(e.target).length === 0) // ... nor a descendant of the container
+	    {
+	        container.hide();
+	        self.zf.isClicked = false;
+	    }
+	});
+
 };
 
 Ziphelp.prototype.toggle = function(){
-
-	this.elem.addEventListener('click', function(event){
-		event.preventDefault();
-
-	    if(this.zf.isClicked) {
+	  if(this.zf.isClicked) {
 	      this.zf.style.display = 'none';
 	      this.zf.isClicked = false;
 	    }else {
 	      this.zf.style.display = 'block';
 	      this.zf.isClicked = true;
 	    }
-	}.bind(this));
 };
 
 Ziphelp.prototype.getValue = function(){

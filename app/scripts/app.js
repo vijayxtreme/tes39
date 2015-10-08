@@ -50,10 +50,18 @@ angular
 //directives can use custom templates
   .directive('ziphelp', function(){
     return {
-      restrict: 'A',
+      restrict: 'E',
       link: function(scope, element, attrs){
-           var zh = new Ziphelp(element);
-           zh.toggle();
-      }
+          var zh = new Ziphelp(element);
+          var parent = element[0].parentNode;
+          console.log(zh);
+          angular.element(parent).find('.ziphelp_btn').click(function(e){
+             e.preventDefault();
+             zh.toggle();
+          });
+
+      },
+      templateUrl: 'views/zipfinder.html',
+      replace: true
     };
   });
