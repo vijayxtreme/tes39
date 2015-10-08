@@ -8,13 +8,23 @@
     position: absolute;
     z-index: 10;
     border-radius: 8px;
-    top: -13px;
-    right: 169px;
     display: none;
     color: white;
     padding: 15px;
 
-
+    h4 {
+       font-size: 14px;
+       padding-bottom: 5px;
+    }
+    .content {
+        text-align: center;
+        width:93%;
+        input {
+            padding:5px !important;
+            width:100% !important;
+            position: static !important;
+        }
+    }
     .zip-arrow {
         height:0px;
         padding:0px;
@@ -35,4 +45,13 @@
         left: 310px;
         cursor:pointer;
     }
+}
+
+#slide1 .zipfinder {
+    top: 2px;
+    right: 203px;
+}
+#slide2 .zipfinder {
+    top: -13px;
+    right: 169px;
 }

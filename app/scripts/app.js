@@ -9,23 +9,24 @@
  * Main module of the application.
  */
 angular
-  .module('bvl39App', ['ngResource', 'ngRoute', 'ngValidate', 'ngMask'])
+  .module('bvl39App', ['ngResource', 'ngValidate', 'ngMask', 'ui.router'])
 
-  .config(function($routeProvider){
-  	$routeProvider
-  	.when('/', {
+  .config(function($stateProvider){
+  	$stateProvider
+  	.state('home', {
+      url: "",
   		templateUrl: 'views/slide1.html',
   		controller:  'slide1Ctrl'
   	})
-  	.when('/step2', {
+  	.state('/step2', {
   		templateUrl: 'views/slide2.html',
   		controller: 'slide2Ctrl'
   	})
-  	.when('/step3', {
+  	.state('/step3', {
   		templateUrl: 'views/slide3.html',
   		controller: 'slide3Ctrl'
   	})
-    .when('/thank-you', {
+    .state('/thank-you', {
       templateUrl: 'views/thank-you.html',
       controller: 'thankYouCtrl'
     });
@@ -40,14 +41,14 @@ angular
             element.datepicker({
                 dateFormat: 'mm/dd/yy',
                 onSelect: function (date) {
-                    scope.date = date;
+                    scope.formData.movedate = date;
+
                     scope.$apply();
                 }
             });
         }
     };
   })
-//directives can use custom templates
   .directive('ziphelp', function(){
     return {
       restrict: 'E',
@@ -64,4 +65,16 @@ angular
       templateUrl: 'views/zipfinder.html',
       replace: true
     };
+  })
+  .directive('googlesearch', function(){
+    return {
+      restrict: 'A',
+      link: function(scope, element, attrs){
+        var input = element[0];
+
+        angular.element(input).on('click', function(e){
+          // do something (aka google stuff)
+        });
+      }
+    }
   });

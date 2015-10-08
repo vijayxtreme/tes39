@@ -8,17 +8,17 @@
        <div class="step">
          <div class="input_area">
             <label>Full Name</label>
-            <input name="first_name" id="first_name" class="name space" type='tel' placeholder="First" />
-            <input name="last_name" id="last_name" class="name" type='tel' placeholder="Last" />
+            <input name="first_name" id="first_name" class="name space" type='tel' placeholder="First" ng-model="formData.firstName"/>
+            <input name="last_name" id="last_name" class="name" type='tel' placeholder="Last" ng-model="formData.lastName" />
           </div>
 
           <div class="input_area">
             <label>Valid Email</label>
-            <input name="email" id="email" type='tel' placeholder="Your email address" />
+            <input name="email" id="email" type='tel' placeholder="Your email address" ng-model="formData.email" />
           </div>
           <div class="input_area">
             <label>Valid Phone</label>
-            <input name="phone" mask="(999) 999-9999" ng-model="phoneNum" id="phone" type='tel' placeholder="(  )  -    " />
+            <input name="phone" mask="(999) 999-9999" id="phone" type='tel' placeholder="(  )  -    " ng-model="formData.phone"/>
           </div>
 
           <div class="calculate">
@@ -36,4 +36,9 @@
   </div>
 
   <div class="google_map"></div>
+  <div>
+    <pre>{{ formData | json }}</pre>
+  </div>
+
 </section>
+

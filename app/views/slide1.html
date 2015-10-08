@@ -6,7 +6,7 @@
       <div class="box basic"></div>
        <div class="step">
           <label>Where are you moving from?</label>
-          <input type='tel' name="from_zip" placeholder="Enter ZIP" ng-model="fromZip" mask="99999" required/>
+          <input type='tel' name="from_zip" placeholder="Enter ZIP" ng-model="formData.fromZip" mask="99999" required/>
           <button class="ziphelp_btn zip_position">ZIP Help</button>
           <ziphelp></ziphelp>
           <div class="calculate">
@@ -25,5 +25,7 @@
   </div>
 
   <div class="moving_people"></div>
+  <div>
+    <pre>{{ formData | json }}</pre>
+  </div>
 </section>
-

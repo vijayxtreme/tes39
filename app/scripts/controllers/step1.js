@@ -8,7 +8,7 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', function ($scope, $location, $rootScope, $http) {
+  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', '$state', function ($scope, $location, $rootScope, $http, $state) {
 
   	$scope.validationOptions = {
   		rules: {
@@ -38,10 +38,12 @@ angular.module('bvl39App')
         //     console.log(err);
         //   });
 
-  			$rootScope.$apply(function(){
-  				$location.path('step2');
-  			});
+  		
+  			$state.go('/step2');
+  		
   		}
   	};
+
+    $scope.formData = {};
    
   }]);

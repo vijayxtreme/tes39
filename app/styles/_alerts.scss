@@ -1,8 +1,8 @@
 //Validation errors, alerts, etc
 
 
-input.error {
-   border:3px solid red;
+input.error, select.error {
+   border:3px solid red !important;
 }
 
 #from_zip-error, #to_zip-error, #move_date-error, #move_size-error {

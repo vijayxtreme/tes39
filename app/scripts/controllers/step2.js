@@ -8,7 +8,7 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('slide2Ctrl', ['$scope', '$log', '$location', '$rootScope', function ($scope, $log, $location, $rootScope) {
+  .controller('slide2Ctrl', ['$scope', '$log', '$location', '$rootScope', '$state', function ($scope, $log, $location, $rootScope, $state) {
 
   	$scope.validationOptions = {
   		rules: {
@@ -39,24 +39,21 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
-  			$rootScope.$apply(function(){
-  				$location.path('step3');
-  			});
+  			$state.go('/step3')
   		}
   	};
 
   	$scope.zipHelp = function($event){
   		$event.preventDefault();
-  		
-      
-
-
   	};
  	
     $scope.calHelp = function($event){
       $event.preventDefault();
       angular.element('#move_date').datepicker('show');
+
     };
+
+    $scope.formData = {};
 
 
   }]);

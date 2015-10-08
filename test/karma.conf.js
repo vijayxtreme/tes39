@@ -31,6 +31,7 @@ module.exports = function(config) {
       'bower_components/jpkleemans-angular-validate/dist/angular-validate.min.js',
       'bower_components/ngMask/dist/ngMask.js',
       'bower_components/jquery-ui/ui/minified/datepicker.min.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
