@@ -11,10 +11,10 @@
 angular
   .module('bvl39App', ['ngResource', 'ngValidate', 'ngMask', 'ui.router'])
 
-  .config(function($stateProvider){
+  .config(function($stateProvider, $locationProvider, $urlRouterProvider){
   	$stateProvider
   	.state('home', {
-      url: "",
+      url: "/",
   		templateUrl: 'views/slide1.html',
   		controller:  'slide1Ctrl'
   	})
@@ -30,6 +30,10 @@ angular
       templateUrl: 'views/thank-you.html',
       controller: 'thankYouCtrl'
     });
+
+   $locationProvider.html5Mode(true);
+   $urlRouterProvider.when('', '/');
+   $urlRouterProvider.otherwise('/');
 
   })
 
