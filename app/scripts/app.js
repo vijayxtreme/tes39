@@ -31,7 +31,7 @@ angular
       controller: 'thankYouCtrl'
     });
 
-   $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);
    $urlRouterProvider.when('', '/');
    $urlRouterProvider.otherwise('/');
 
