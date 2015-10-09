@@ -39,7 +39,7 @@ angular.module('bvl39App')
         //     console.log(err);
         //   });
 
-  		
+  		  $rootScope.formData1 = $scope.formData;
   			$state.go('/step2');
   		
   		}

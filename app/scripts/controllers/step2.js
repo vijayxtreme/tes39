@@ -39,6 +39,7 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
+        $rootScope.formData2 = $scope.formData;
   			$state.go('/loader')
   		}
   	};
