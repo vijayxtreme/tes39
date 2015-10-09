@@ -23,16 +23,17 @@ section#slide2 {
 				left:29px;
 			}
 			select {
-				-webkit-appearance:none;
-			    background-color: white;
-			    padding: 20px;
-			    margin-left: 37px;
-			    font-size:18px;
-			    width: 223px;
-			    border:3px solid transparent;
-			    outline:none;
+				-webkit-appearance: none;
+				background-color: white;
+				padding: 16px 20px;
+				margin-left: 37px;
+				font-size: 17px;
+				width: 220px;
+				border: 3px solid transparent;
+				outline: none;
+				position: relative;
+				// color: rgb(169, 169, 169);
 			}
-
 
 			.zip_position {
 				position: absolute;
@@ -49,7 +50,7 @@ section#slide2 {
 			}
 
 			#move_size {
-				left:39px;
+				left:2px;
 			}
 
 		}

@@ -22,6 +22,10 @@ angular
   		templateUrl: 'views/slide2.html',
   		controller: 'slide2Ctrl'
   	})
+    .state('/loader', {
+      templateUrl: 'views/loader.html',
+      controller: 'ldrCtrl'
+    })
   	.state('/step3', {
   		templateUrl: 'views/slide3.html',
   		controller: 'slide3Ctrl'

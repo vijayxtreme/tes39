@@ -39,7 +39,7 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
-  			$state.go('/step3')
+  			$state.go('/loader')
   		}
   	};
 
