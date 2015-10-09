@@ -30,6 +30,13 @@ var Ziphelp = function(element){
 
 };
 
+
+Ziphelp.prototype.close = function(){
+	this.zf.style.display="none";
+	this.zf.isClicked = false;
+};
+
+
 Ziphelp.prototype.toggle = function(){
 	  if(this.zf.isClicked) {
 	      this.zf.style.display = 'none';

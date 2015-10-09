@@ -8,6 +8,9 @@
  *
  * Main module of the application.
  */
+
+var gs;
+
 angular
   .module('bvl39App', ['ngResource', 'ngValidate', 'ngMask', 'ui.router'])
 
@@ -79,9 +82,14 @@ angular
       restrict: 'A',
       link: function(scope, element, attrs){
         var input = element[0];
+       
+        
+        angular.element(input).on('focus', function(e){
+           // do something (aka google stuff)
+            gs = new GoogleSearch(element, scope);
 
-        angular.element(input).on('click', function(e){
-          // do something (aka google stuff)
+
+
         });
       }
     }

@@ -27,6 +27,7 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
+
         // $http.get('/validate/validate/')
         //   .success(function(data){
         //       console.log(data);
