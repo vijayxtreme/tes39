@@ -16,8 +16,8 @@ angular.module('bvl39App')
 
 
   	$scope.countNumber = function(){
-  		var speed1 = 68;
-		var speed2 = 72;
+  		var speed1 = 68,
+			speed2 = 72;
 				
 		count();
 
@@ -41,7 +41,7 @@ angular.module('bvl39App')
   	};
 
   	$scope.countNumber();
-
+  	$scope.date = new Date();
   	
 
 
