@@ -17,6 +17,7 @@ var Ziphelp = function(element){
 	this.close.addEventListener('click', function(){
 		this.zf.style.display="none";
 		this.zf.isClicked = false;
+
 	}.bind(this));
 
 	$(document).mouseup(function (e) {
@@ -25,6 +26,7 @@ var Ziphelp = function(element){
 	    if (!container.is(e.target) && container.has(e.target).length === 0){
 	        container.hide();
 	        self.zf.isClicked = false;
+
 	    }
 	});
 
@@ -34,6 +36,8 @@ var Ziphelp = function(element){
 Ziphelp.prototype.close = function(){
 	this.zf.style.display="none";
 	this.zf.isClicked = false;
+
+
 };
 
 
@@ -44,6 +48,7 @@ Ziphelp.prototype.toggle = function(){
 	    }else {
 	      this.zf.style.display = 'block';
 	      this.zf.isClicked = true;
+	      this.input.focus();
 	    }
 };
 

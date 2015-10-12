@@ -29,7 +29,7 @@ angular.module('bvl39App')
 				}else if ($scope.loaderPercent >=50 && $scope.loaderPercent < 100){
 					speed1 = speed2;
 					count();
-					$scope.message = 'Searching For Movers';
+					$scope.message = 'Searching For Movers...';
 				}else if ($scope.loaderPercent == 100){
 					$scope.message = 'Matching Movers Were Found!'
 					$timeout(function(){
