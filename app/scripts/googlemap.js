@@ -1,13 +1,17 @@
+"use strict";
+
 var GoogleMap = function(element, scope){
 	$ = angular.element;
 
-	var start = scope.formData1.from_zip;
-	var end = scope.formData2.to_zip;
-
-	if(start === undefined || start === null || end === undefined || end === null) {
+	try {
+		var start = scope.formData1.from_zip;
+		var end = scope.formData2.to_zip;
+	}catch(e){
 		var start = '90802';
 		var end = '90036';
+
 	}
+
 		
 	var initializeMap = function(){
 		var mapOptions = {

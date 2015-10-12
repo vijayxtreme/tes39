@@ -46,10 +46,12 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
+        $rootScope.formData3 = $scope.formData;
   			$state.go('/thank-you');
   		}
   	};
 
     $scope.formData = {};
+    $rootScope.howState = "step3";
 
   }]);
