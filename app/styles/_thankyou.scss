@@ -1,18 +1,29 @@
 //Thank You
 
 section#thankyou {
-	h1, h2 {
+	h2, h3 {
 		font-weight:300;
 		color:white;
 	}
-	h1 {
-		font-size:46px;	
-		margin-bottom: 15px;
-	}
 	h2 {
-	    font-size: 26px;
+		font-size:42px;	
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	h3 {
+	    padding-left: 80px;
+	    padding-right: 80px;
+	    position: relative;
+	    left: 10px;
+	    font-size: 18px;
+	    line-height: 20px;
 	    font-weight: 500;
 	    text-align: center;
-	    margin-bottom: 25px;
+	    margin-bottom: 32px;
+	}
+	.quote-range {
+		padding-top:40px 20px;
+		text-align: center;
+		background-color: #96CBE7;
 	}
 }

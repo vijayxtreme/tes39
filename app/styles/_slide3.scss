@@ -24,14 +24,14 @@ section#slide3 {
 	}
 	.form_main {
 		.box {
-			height:274px;
+			height:287px;
 			width: 420px;
 		}
 		.step {
-
+			padding: 22px 35px;
 			.calculate {
 				padding-left: 67px;
-    			padding-top: 6px;
+    			padding-top: 13px;
 			}
 
 
@@ -68,5 +68,9 @@ section#slide3 {
 		padding-top:0px;
 		padding-right:154px;
 		float:right;
+
+		div {
+			margin-top:15px;
+		}
 	}
 }
