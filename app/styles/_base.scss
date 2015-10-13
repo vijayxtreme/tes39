@@ -25,7 +25,7 @@ body {
 }
 
 .sprite {
-  background:url('../images/spritesheet1-comprs.png');
+  background:url('../images/spritesheet1a-comprs.png');
 }
 
 
@@ -164,3 +164,11 @@ code {
   width:100%;
 }
 
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}

@@ -52,6 +52,6 @@ angular.module('bvl39App')
   	};
 
     $scope.formData = {};
-    $rootScope.howState = "step3";
+    $rootScope.howState = "step4";
 
   }]);

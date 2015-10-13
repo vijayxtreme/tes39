@@ -41,7 +41,7 @@
     <div class="container">
       <div ui-view></div>
     </div>
-    
+
      <div class="how" ng-controller="HowCtrl">
       <div class="container" ng-switch="howState">
        <div ng-switch-when="step1" class="how_it_works">
@@ -55,8 +55,7 @@
               </li>
               <li>
                 <div class="sprite howImg costImg"></div>
-                <div>2. View estimated cost</div>
-                
+                <div>2. View estimated cost</div>      
               </li>
               <li>
                 <div class="sprite howImg quoteImg"></div>
@@ -66,8 +65,74 @@
           </div>
         </div>
        </div>
-       <div ng-switch-when="step3" class="consent">
-
+       <div ng-switch-when="step2" class="how_it_works step2">
+         <div>
+          <h4>What is it based on?</h4>
+          <div>
+            <ol>
+              <li>
+                <div class="sprite weightImg"></div>
+                <div>
+                  <h5>Weight</h5>
+                  <p>The weight of your inventory is one of the major factors your quote is based on.</p>
+                </div>
+              </li>
+              <li>
+                <div class="sprite distImg"></div>
+                <div>
+                  <h5>Distance</h5>
+                  <p>The weight of your inventory is one of the major factors your quote is based on.</p>
+                </div>
+              </li>
+              <li>
+                <div class="sprite timeImg"></div>
+                <div>
+                  <h5>Timing</h5>
+                  <p>The weight of your inventory is one of the major factors your quote is based on.</p>
+                </div>
+              </li>
+              <li>
+                <div class="sprite serviceImg"></div>
+                <div>
+                  <h5>Extra Services</h5>
+                  <p>The weight of your inventory is one of the major factors your quote is based on.</p>
+                </div>
+              </li>
+              <li>
+                <div class="sprite originImg"></div>
+                <div>
+                  <h5>Origin & Destination</h5>
+                  <p>The weight of your inventory is one of the major factors your quote is based on.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+       </div>
+       <div ng-switch-when="step3" class="how_it_works step3 clearfix">
+          <div class="questions left">
+            <table>
+              <thead>
+                <tr> 
+                  <th>Question:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td ng-mouseover="display(0)">How do you calculate my moving quote?</td></tr>
+                <tr><td ng-mouseover="display(1)">Can my moving quote be as low as $999</td></tr>
+                <tr><td ng-mouseover="display(2)">Who can I expect to contact me?</td></tr>
+                <tr><td ng-mouseover="display(3)">What is Budget Van Lines?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="answers right">
+            <h5>Answer:</h5>
+            <div>
+              <p ng-init="display(0)">{{ answer_msg }}</p>
+            </div>
+          </div>
+       </div>
+       <div ng-switch-when="step4" class="consent">
          <p>By clicking on the "Get My Quotes" button I am verifying that I am over 18 years of age and I agree to the Terms of Use and Privacy Policy; my "click" provides expressed written consent to be contacted directly by Budget Van Lines and/or any other matching companies or third party companies that can service my move, to quote my move and offer their moving services via emails, text messages or calls/pre-recorded messages via automatic dialing systems even if I am on the DNC list; consent is not a condition of purchase.</p>
          </div>
        </div>
