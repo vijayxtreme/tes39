@@ -55,6 +55,9 @@ body {
   color: #6DA4F1;
 }
 
+a {
+	cursor: pointer;
+}
 
 input {
   @extend .baseInpBtn; 

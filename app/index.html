@@ -21,7 +21,8 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header" ng-controller="MainCtrl">
+    <div ng-controller="MainCtrl">
+    <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="left">
@@ -40,6 +41,7 @@
 
     <div class="container">
       <div ui-view></div>
+    </div>
     </div>
 
      <div class="how ng-cloak" ng-controller="HowCtrl">
@@ -144,10 +146,10 @@
       </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" ng-controller="FooterCtrl">
       <div class="container">
-        <p><a href="#">Privacy Policy</a>&nbsp; | &nbsp;<a href="">Terms of Use</a></p>
-        <p class="copyright">Copyright 2015 &copy; <a href="#">www.BudgetVanLines.com</a></p>
+        <p><a ng-click="open('http://www.budgetvanlines.com/info/privacy-policy')">Privacy Policy</a>&nbsp; | &nbsp;<a ng-click="open('http://www.budgetvanlines.com/info/terms-of-use')">Terms of Use</a></p>
+        <p class="copyright">Copyright 2015 &copy; <a href="http://www.budgetvanlines.com" target="_blank">www.BudgetVanLines.com</a></p>
        </div>
     </div>
 
@@ -192,6 +194,7 @@
         <script src="scripts/controllers/step3.js"></script>
         <script src="scripts/controllers/how.js"></script>
         <script src="scripts/controllers/disc.js"></script>
+        <script src="scripts/controllers/footer.js"></script>
         <script src="scripts/controllers/thankyou.js"></script>
         <script src="scripts/googlesearch.js"></script>
 
