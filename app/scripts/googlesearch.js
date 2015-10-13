@@ -33,6 +33,11 @@ var GoogleSearch = function(element, scope){
     		return false;
 		}
 	});
+	this.$(this.elem).click(function(){
+		google.maps.event.addListener(self.autocomplete, 'place_changed', function() {
+	      self.fillInAddress();
+		 });
+	});
 };
 
 GoogleSearch.prototype.fillInAddress = function(){

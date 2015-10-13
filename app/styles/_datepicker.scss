@@ -1,0 +1,107 @@
+.ui-widget.bluedatepicker  {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	background: #35578E;
+	border: none;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.ui-datepicker.bluedatepicker  {
+	padding: 0;
+	box-shadow: 1px 1px 10px #004369;
+}
+
+.bluedatepicker .ui-datepicker-header {
+	border: none;
+	background: transparent;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+.bluedatepicker .ui-datepicker-header .ui-state-hover {
+	background: transparent;
+	border-color: transparent;
+	cursor: pointer;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.bluedatepicker .ui-datepicker-title {
+	margin-top: .4em;
+	margin-bottom: .3em;
+	color: #e9f0f4;
+}
+
+.ui-datepicker.bluedatepicker .ui-datepicker-prev-hover,
+.ui-datepicker.bluedatepicker .ui-datepicker-next-hover,
+.ui-datepicker.bluedatepicker .ui-datepicker-next,
+.ui-datepicker.bluedatepicker .ui-datepicker-prev {
+	top: .9em;
+	border:none;
+}
+
+.ui-datepicker.bluedatepicker .ui-datepicker-prev-hover {
+	left: 2px;
+}
+
+.ui-datepicker.bluedatepicker .ui-datepicker-next-hover {
+	right: 2px;
+}
+
+.ui-datepicker.bluedatepicker .ui-datepicker-next span,
+.ui-datepicker.bluedatepicker .ui-datepicker-prev span {
+	background-image: url(../images/spritesheet1a-comprs.png);
+	background-position: -392px -321px;
+	margin-top: 0;
+	top: 0;
+	font-weight: normal;
+}
+
+.ui-datepicker.bluedatepicker .ui-datepicker-prev span {
+	background-position: -379px -321px;
+}
+
+.ui-datepicker.bluedatepicker table {
+	margin: 0;
+}
+
+.ui-datepicker.bluedatepicker th {
+	padding: 1em 0;
+	color: #ccc;
+	font-size: 13px;
+	font-weight: normal;
+	border: none;
+	border-top: 1px solid #3a414d;
+}
+
+.ui-datepicker.bluedatepicker td {
+	background: #5EB2DB;
+	border: none;
+	padding: 0;
+}
+
+.bluedatepicker td .ui-state-default {
+	background: transparent;
+	border: none;
+	text-align: center;
+	padding: .5em;
+	margin: 0;
+	font-weight: normal;
+	color: #fff;
+	font-size: 16px;
+}
+
+.bluedatepicker .ui-state-disabled  {
+	opacity: 1;
+}
+
+.bluedatepicker .ui-state-disabled .ui-state-default {
+	color: #43A0D4;
+}
+
+.bluedatepicker td .ui-state-active,
+.bluedatepicker td .ui-state-hover {
+	background: #2e3641;
+}

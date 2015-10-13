@@ -52,6 +52,9 @@ angular
                 dateFormat: 'mm/dd/yy',
                 minDate: -0,
                 maxDate: "+90D",
+                beforeShow: function(){
+                   angular.element('#ui-datepicker-div').addClass('bluedatepicker');
+                },
                 onSelect: function (date) {
                     scope.formData.movedate = date;
                     scope.$apply();
