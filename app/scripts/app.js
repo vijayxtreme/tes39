@@ -11,7 +11,7 @@
 
 
 angular
-  .module('bvl39App', ['ngResource', 'ngValidate', 'ngMask', 'ui.router'])
+  .module('bvl39App', ['ngResource', 'ngValidate', 'ngMask', 'ui.router', 'ngSanitize'])
 
   .config(function($stateProvider, $locationProvider, $urlRouterProvider){
   	$stateProvider

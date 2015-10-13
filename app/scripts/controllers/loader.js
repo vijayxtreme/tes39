@@ -10,7 +10,7 @@
 angular.module('bvl39App')
   .controller('ldrCtrl', ['$scope', '$state', '$timeout', function ($scope, $state, $timeout) {
 
-  	$scope.message = 'Calculating...';
+  	$scope.message = '<h3>Calculating...</h3>';
 
   	$scope.loaderPercent = 0;
 
@@ -29,9 +29,9 @@ angular.module('bvl39App')
 				}else if ($scope.loaderPercent >=50 && $scope.loaderPercent < 100){
 					speed1 = speed2;
 					count();
-					$scope.message = 'Searching For Movers...';
+					$scope.message = '<h3>Searching For Movers...</h3>';
 				}else if ($scope.loaderPercent == 100){
-					$scope.message = 'Matching Movers Were Found!'
+					$scope.message = '<h2>Matching Movers Were Found!</h2>'
 					$timeout(function(){
 					    $state.go('/step3');
 					}, 2000);
