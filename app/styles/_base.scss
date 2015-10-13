@@ -17,6 +17,9 @@ a {
 body {
   padding: 0;
   background: -webkit-linear-gradient(left, #45A0D4, #40A0D4);
+  background: -moz-linear-gradient(left, #45A0D4, #40A0D4);
+  background: -ms-linear-gradient(left, #45A0D4, #40A0D4);
+  background: linear-gradient(to left, #45A0D4, #40A0D4);
   font-family: 'Roboto', sans-serif;
 
 }
