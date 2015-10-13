@@ -44,7 +44,6 @@ angular.module('bvl39App')
   		
   		}
   	};
-
     $scope.formData = {};
     $rootScope.howState = "step1";
    

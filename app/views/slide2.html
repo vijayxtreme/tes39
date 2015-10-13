@@ -6,14 +6,14 @@
          <div class="input_area">
             <label>Where are you moving to?</label>
             <input name="to_zip" id="to_zip" type='tel' placeholder="ZIP Code" ng-model="formData.to_zip" mask="99999" autocomplete="off"/>
-            <button class="ziphelp_btn zip_position">ZIP Help</button>
+            <button type="button" class="ziphelp_btn zip_position">ZIP Help</button>
             <ziphelp></ziphelp>
           </div>
 
           <div class="input_area">
             <label>When is your move date?</label>
             <input name="move_date" id="move_date" type="text" placeholder="Move Date" ng-model="formData.move_date" jqdatepicker autocomplete="off"/>
-            <button class="ziphelp_btn zip_position" ng-click="calHelp($event)">Calendar</button>
+            <button type="button" class="ziphelp_btn zip_position" ng-click="calHelp($event)">Calendar</button>
           </div>
           <div class="input_area">
             <label>How large is your move?</label>

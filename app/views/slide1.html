@@ -7,11 +7,12 @@
        <div class="step">
           <label>Where are you moving from?</label>
           <input type='tel' id="from_zip" name="from_zip" placeholder="Enter ZIP" ng-model="formData.from_zip" mask="99999" required/>
-          <button class="ziphelp_btn zip_position">ZIP Help</button>
+          <button type="button" class="ziphelp_btn zip_position">ZIP Help</button>
           <ziphelp></ziphelp>
           <div class="calculate">
           <!--   <input type="submit" class="submit" value="Calculate"> -->
            <button type="submit" class="submit">Calculate</button>
+
           </div>
         </div>
     </form>
