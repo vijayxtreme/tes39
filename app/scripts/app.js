@@ -50,9 +50,10 @@ angular
          link: function (scope, element, attrs, ngModelCtrl) {
             element.datepicker({
                 dateFormat: 'mm/dd/yy',
+                minDate: -0,
+                maxDate: "+90D",
                 onSelect: function (date) {
                     scope.formData.movedate = date;
-
                     scope.$apply();
                 }
             });
