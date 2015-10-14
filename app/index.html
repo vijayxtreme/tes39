@@ -22,7 +22,7 @@
 
     <!-- Add your site or application content here -->
     <div ng-controller="MainCtrl">
-    <div class="header">
+    <div class="header ng-cloak">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="left">
@@ -39,8 +39,8 @@
       </div>
     </div>
 
-    <div class="container">
-      <div ui-view></div>
+    <div class="container ng-cloak" ui-view-container>
+      <div ui-view class="well"></div>
     </div>
     </div>
 
@@ -140,13 +140,13 @@
        </div>
     </div>
 
-    <div class="disclaimer">
+    <div class="disclaimer ng-cloak">
       <div class="container">
       <div ng-include="'views/disclaimer.html'" ng-controller="DiscCtrl"></div>
       </div>
     </div>
 
-    <div class="footer" ng-controller="FooterCtrl">
+    <div class="footer ng-cloak" ng-controller="FooterCtrl">
       <div class="container">
         <p><a ng-click="open('http://www.budgetvanlines.com/info/privacy-policy')">Privacy Policy</a>&nbsp; | &nbsp;<a ng-click="open('http://www.budgetvanlines.com/info/terms-of-use')">Terms of Use</a></p>
         <p class="copyright">Copyright 2015 &copy; <a href="http://www.budgetvanlines.com" target="_blank">www.BudgetVanLines.com</a></p>
@@ -179,6 +179,7 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAOAFjKE8xQUWxlVds1COiroKVmYjH8SoM&libraries=places&sensor=true"></script>

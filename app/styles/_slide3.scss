@@ -13,15 +13,17 @@ section#slide3 {
 		font-weight:100;
 	}
 	h3 {
-	    padding-left: 80px;
-	    padding-right: 80px;
+	    padding-left: 150px;
+	    padding-right: 150px;
 	    position: relative;
-	    left: 10px;
+	    left: 50%;
 	    font-size: 18px;
 	    line-height: 20px;
+	    margin-left: -608px;
 	    font-weight: 500;
 	    text-align: center;
 	    margin-bottom: 32px;
+	    width: 940px;
 	}
 	.form_main {
 		.box {
@@ -75,11 +77,13 @@ section#slide3 {
 
 	.trusted_partners {
 	    padding-top: 0px;
-	    padding-right: 130px;
+	    padding-right: 386px;
 	    float: right;
 	    padding-bottom: 5px;
 	    position: relative;
 	    top: -10px;
+	    left: 30%;
+	    margin-left: 0px;
 
 		div {
 			margin-top:15px;

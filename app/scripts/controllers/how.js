@@ -19,4 +19,5 @@ angular.module('bvl39App')
       //$log.info(messages);
       $scope.answer_msg = messages[index];
     }; 
+
   }]);

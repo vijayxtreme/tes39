@@ -53,5 +53,7 @@ angular.module('bvl39App')
 
     $scope.formData = {};
     $rootScope.howState = "step4";
+     var how = angular.element('.how')[0];
+     how.style.marginTop = "500px";
 
   }]);
