@@ -8,7 +8,7 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('slide2Ctrl', ['$scope', '$log', '$location', '$rootScope', '$state', function ($scope, $log, $location, $rootScope, $state) {
+  .controller('slide2Ctrl', ['$scope', '$log', '$location', '$rootScope', '$state', '$http', function ($scope, $log, $location, $rootScope, $state, $http) {
 
   	$scope.validationOptions = {
   		rules: {

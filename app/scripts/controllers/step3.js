@@ -8,7 +8,7 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('slide3Ctrl', ['$scope', '$log', '$location','$rootScope', '$state', function ($scope, $log, $location, $rootScope, $state) {
+  .controller('slide3Ctrl', ['$scope', '$log', '$location','$rootScope', '$state', '$http', '$timeout', function ($scope, $log, $location, $rootScope, $state, $http, $timeout) {
 
   	$scope.validationOptions = {
   		rules: {
@@ -78,12 +78,10 @@ angular.module('bvl39App')
   	};
 
     $scope.calculate = function(){
-      /* 
-        var start = $("#zip_from").val(),
-        end = $("#zip_to").val(),
-        $namePlaceholder = $("#person-name"),
-        $name = $("#first_name").val() + " " + $("#last_name").val();
-
+       
+        var start = $rootScope.formData1.from_zip;
+        var end = $rootScope.formData2.to_zip;
+    
         var callback = function(response, status) {
 
           if (status != google.maps.DistanceMatrixStatus.OK) {
@@ -94,90 +92,65 @@ angular.module('bvl39App')
             var test = '';
             var str1 = origins.toString();
             var str2 = destinations.toString();
-
-            var fixHeight = function(){
-            switch(window.orientation)
-            {
-              case -90:
-              case 90:
-                $("#main.container").css('height','610px');
-                break;
-              default:
-                $("#main.container").css('height','658px');
-              break;
-            }
-            };
-
-            if(window.innerWidth < 1024){
-                window.addEventListener('orientationchange', fixHeight);
-              fixHeight();
-            }
-            //document.getElementById('main').style.height = '1140px';
-
+                        
             if( str1.match(/\bUSA\b/) && str2.match(/\bUSA\b/)){
               try{
                 for (var i = 0; i < origins.length; i++) {
-                var results = response.rows[i].elements;
-                for (var j = 0; j < results.length; j++) {
-                   test += results[j].distance.text;
-                }
-                }
-              var $rooms;
-                if($('#number_of_rooms').val() != ''){
-                $rooms = $('#number_of_rooms').val()
-                }
-              var roomTable =  {  
-                'Studio'  : 'studio',
-                '1 Bedroom'   : 'one bedrooms apartment',
-                '2 Bedrooms'  : 'two bedrooms apartment',
-                '3 Bedrooms'  : 'three bedrooms apartment',
-                '4 Bedrooms'  : 'four bedrooms apartment',
-                '5 Bedrooms'  : 'five bedrooms apartment',
-                '6 Bedrooms'  : 'six bedrooms apartment',
-                'Commercial Move' : 'six bedrooms and more apartment'
-              };
-              $rooms = roomTable[$rooms];
+                  var results = response.rows[i].elements;
+                  for (var j = 0; j < results.length; j++) {
+                     test += results[j].distance.text;
+                  }
+                 }
+              
+                var rooms = $rootScope.formData2.move_size;
+                
+                var roomTable =  {  
+                  'Studio'  : 'studio',
+                  '1 Bedroom'   : 'one bedrooms apartment',
+                  '2 Bedrooms'  : 'two bedrooms apartment',
+                  '3 Bedrooms'  : 'three bedrooms apartment',
+                  '4 Bedrooms'  : 'four bedrooms apartment',
+                  '5 Bedrooms'  : 'five bedrooms apartment',
+                  '6 Bedrooms'  : 'six bedrooms apartment',
+                  'Commercial Move' : 'six bedrooms and more apartment'
+                };
+                
+                rooms = roomTable[rooms];
 
 
-              $.post(
+                $http(
                   '/validate/calculator/calc',
                   {
-                    rooms: $rooms,
+                    rooms: rooms,
                     miles: test
-                  },
-                  function(data){
+                  }).success(function(data){
                     //console.log(data)
                     var d = $.parseJSON(data);
-                    setTimeout(
-                      function(){
-                      $(".num_of_rooms").each(function(k,v){ $(v).text($("#number_of_rooms").val()) });
+                    setTimeout(function(){
+                      //message
                       $("#calculator").html('Your quote range is: <span class="thePrice">'+ '$' + d['self_service_small']['min'] + ' to $' + d['full_service_p_large']['max'] + '</span>');
-                        
-                        $.each(d, function(k, v){
-                          $("#"+k).addClass('prices');
-                          $("#"+k).html("$" + v['min'] + " - $" + v['max']);
-                        });                       
-
-                        $(".quote-columns table").fadeIn();
-      
                       }
-                    , 2000 );
-                  }
-                );    
+                    , 2000);
+                  }).error(function(e){
+                      console.log(e);
+                  });
+                    
               }catch(e){
                 setTimeout(
                   function(){
+                    //message
                     $("#calculator").html("There was an error trying to retrieve your quote.");
                   }
                 , 3000);
               }
             }
             else{
-            setTimeout(
-              function(){
-                $("#calculator").html("Unable to calculate.  Zip codes requested may not be available for service.");
-              }
-            , 3000);
+              setTimeout(
+                function(){
+                  //message
+                  $("#calculator").html("Unable to calculate.  Zip codes requested may not be available for service.");
+                }
+              , 3000);
             }
           }
         };
@@ -197,11 +170,25 @@ angular.module('bvl39App')
         
         calculateDistances();
 
-      */
+      
     };
 
-    $scope.conversion = function(id, val){
-
+    $scope.conversion = function(google_conversion_id,google_conversion_label){
+      try{
+        _gaq.push(['_trackEvent', 'desktop', '999moving', 'step3-test37']);
+        setTimeout(
+          function(){
+            _gaq.push(['_trackEvent', 'Conversion', 'Landing-test37', 'Validate']);
+          }, 100
+        );
+        //__adroll.record_user({"adroll_segments": "quote_complete"});
+        }catch(e){
+          //console.log(e);
+        }
+        //google conversion script
+        var image = new Image(1,1); 
+        image.src = "http://www.googleadservices.com/pagead/conversion/"+google_conversion_id+"/?label="+google_conversion_label + "&script=0";
+        $('#mstag').attr('src','//flex.msn.com/mstag/tag/224166ee-2898-4858-ad70-bbad4fbe8c69/analytics.html?dedup=1&domainId=334508&type=1&revenue=&actionid=1320');
     };
 
     $scope.formData = {};
