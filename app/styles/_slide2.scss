@@ -24,6 +24,8 @@ section#slide2 {
 			}
 			select {
 				-webkit-appearance: none;
+				-o-appearance:none;
+				-moz-appearance:none;
 				appearance:none;
 				background-color: white;
 				padding: 10px 20px;
@@ -35,6 +37,9 @@ section#slide2 {
 				border-radius: 5px;
 				height:50px;
 				// color: rgb(169, 169, 169);
+			}
+			select::-ms-expand {
+   				 display: none;
 			}
 			#cal {
 				left: 353px;
@@ -72,13 +77,12 @@ section#slide2 {
 
 	.country_map {
 	    background: url("../images/spritesheet1a-comprs.png");
-	    height: 254px;
+	    height: 247px;
 	    width: 387px;
 	    position: relative;
 	    left: 523px;
 	    top: 30px;
-	    background-position: 433px 595px;
-
+	    background-position: 433px 589px;
 	}
 
 }
