@@ -61,6 +61,9 @@ angular.module('bvl39App')
 
     };
 
+    var how = angular.element('.how')[0];
+    how.style.marginTop = "409px";
+
 
    
   }]);
