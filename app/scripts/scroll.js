@@ -1,3 +1,5 @@
+"use strict";
+
 var Scroll = function(element){
 	this.element = element;
 
