@@ -15,14 +15,26 @@ angular.module('bvl39App')
   			to_zip: {
   				required: true,
   				minlength: 5,
-  				maxlength: 5
+  				maxlength: 5,
+        // remote: {
+        //   type: 'post',
+        //   url: '/validate/validate/to-zipcode'
+        // }
   			},
   			move_date: {
   				required: true,
+          // remote: {
+          //   type: 'post',
+          //   url: '/validate/validate/movedate'
+          // }          
   			},
   			move_size: {
   				required: true,
-  			}
+          // remote: {
+          //   type: 'post',
+          //   url: '/validate/validate/rooms'
+          // }
+  			},
   		}, 
   		messages: {
   			zip: {
@@ -39,6 +51,9 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
+          // try{
+          //   _gaq.push(['_trackEvent', 'desktop', '999moving', 'step2-test37']);
+          // }catch(e){}
         $rootScope.formData2 = $scope.formData;
   			$state.go('/loader')
   		}

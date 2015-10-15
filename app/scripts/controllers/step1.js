@@ -16,7 +16,11 @@ angular.module('bvl39App')
   				required: true,
   				minlength: 5,
   				maxlength: 5
-  			}
+  			},
+        // remote: {
+        //     type: 'post',
+        //     url: '/validate/validate/from-zipcode'
+        // }
   		}, 
   		messages: {
   			from_zip: {
@@ -24,7 +28,7 @@ angular.module('bvl39App')
   				minlength: "Must be 5 digits",
   				maxlength: "Cannot be more than 5 digits"
   			}
-  		}, 
+  		},
   		errorElement: 'div',
   		submitHandler: function(){
 
@@ -38,7 +42,9 @@ angular.module('bvl39App')
         //   .error(function(err){
         //     console.log(err);
         //   });
-
+          // try{
+          //   _gaq.push(['_trackEvent', 'desktop', '999moving', 'step1-test37']);
+          // }catch(e){}
   		  $rootScope.formData1 = $scope.formData;
   			$state.go('/step2');
   		
