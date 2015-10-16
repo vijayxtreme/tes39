@@ -154,6 +154,11 @@
     </div>
 
   <iframe id="mstag" src="" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe>
+  <script>
+    function googleMapsLoaded(){
+      console.log('google maps loaded!');
+    }
+  </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -169,7 +174,6 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
@@ -177,12 +181,10 @@
     <script src="bower_components/ngMask/dist/ngMask.js"></script>
     <script src="bower_components/jquery-ui/ui/minified/datepicker.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAOAFjKE8xQUWxlVds1COiroKVmYjH8SoM&libraries=places&sensor=true"></script>
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/zipfinder.js"></script>
         <script src="scripts/googlemap.js"></script>

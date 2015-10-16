@@ -1,5 +1,28 @@
 'use strict';
 
+
+/* Script for lazy loading in Angular */
+(function (ng) {
+  'use strict';
+
+  var app = ng.module('ngLoadScript', []);
+
+  app.directive('script', function() {
+    return {
+      restrict: 'E',
+      scope: false,
+      link: function(scope, elem, attr) {
+        if (attr.type === 'text/javascript-lazy') {
+          var code = elem.text();
+          var f = new Function(code);
+          f();
+        }
+      }
+    };
+  });
+
+}(angular));
+
 /**
  * @ngdoc overview
  * @name bvl39App
@@ -11,7 +34,7 @@
 
 
 angular
-  .module('bvl39App', ['ngResource', 'ngValidate', 'ngMask', 'ui.router', 'ngSanitize', 'ngAnimate'])
+  .module('bvl39App', ['ngResource', 'ngValidate', 'ngMask', 'ui.router', 'ngSanitize', 'ngAnimate', 'ngLoadScript'])
 
   .config(function($stateProvider, $locationProvider, $urlRouterProvider){
   	$stateProvider
@@ -102,3 +125,5 @@ angular
       templateUrl: 'views/googlemap.html'
     }
   });
+
+

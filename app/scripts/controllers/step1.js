@@ -8,8 +8,12 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', '$state', '$window', function ($scope, $location, $rootScope, $http, $state, $window) {
-   
+  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', '$state', '$window', '$timeout', function ($scope, $location, $rootScope, $http, $state, $window, $timeout) {
+
+    $timeout(function(){
+      $.getScript('http://maps.googleapis.com/maps/api/js?key=AIzaSyAOAFjKE8xQUWxlVds1COiroKVmYjH8SoM&libraries=places&sensor=true&callback=window.googleMapsLoaded');   
+    }, 1000);
+
     $scope.formData = {};
     $scope.formData.source = window.location.href; // get url source 
 
@@ -42,6 +46,8 @@ angular.module('bvl39App')
          //  }catch(e){}
   		  $rootScope.formData1 = $scope.formData;
   			$state.go('/step2');
+        //Lazy load google maps
+
   		
   		}
   	};

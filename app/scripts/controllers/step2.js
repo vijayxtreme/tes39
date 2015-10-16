@@ -56,7 +56,8 @@ angular.module('bvl39App')
           //   _gaq.push(['_trackEvent', 'desktop', '999moving', 'step2-test39']);
           // }catch(e){}
         $rootScope.formData2 = $scope.formData;
-  			$state.go('/loader')
+
+  			$state.go('/loader');
   		}
   	};
 
