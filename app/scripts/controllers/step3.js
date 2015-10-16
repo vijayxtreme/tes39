@@ -14,68 +14,68 @@ angular.module('bvl39App')
   		rules: {
   			first_name: {
   				required: true,
-          // remote: {
-          //     type: 'post',
-          //     url: '/validate/validate/firstname'
-          // }
+          remote: {
+              type: 'post',
+              url: '/validate/validate/firstname'
+          }
   			},
   			last_name: {
   				required: true,
-          // remote: {
-          //     type: 'post',
-          //     url: '/validate/validate/lastname'
-          // }
+          remote: {
+              type: 'post',
+              url: '/validate/validate/lastname'
+          }
   			},
   			email: {
   				required: true,
           email:true,
-          // remote: {
-          //   type: 'post',
-          //   url: '/validate/validate/email'
-          // }
+          remote: {
+            type: 'post',
+            url: '/validate/validate/email'
+          }
   			},
   			phone: {
   				required: true,
   				minlength:14,
   				maxlength:14,
-          // remote: {
-          //     type: 'post',
-          //     url: '/validate/validate/phone'
-          // }
+          remote: {
+              type: 'post',
+              url: '/validate/validate/phone'
+          }
   			}
 
   		}, 
   		messages: {
   			first_name: {
   				required: "Please enter your first name",
-          // remote: "Please enter a valid first name"
+          remote: "Please enter a valid first name"
   			},
   			last_name: {
   				required: "Please enter your last name",
-          // remote: "Please enter a valid last name"
+          remote: "Please enter a valid last name"
   			},
   			email: {
   				required: "Please enter your email address",
-          // remote: "Please enter a valid email address"
+          remote: "Please enter a valid email address"
   			},
   			phone: {
   				required: "Please enter your phone number",
   				minlength: "Phone number must be 10 digits",
   				maxlength: "Phone number cannot be greater than 10 digits",
-          // remote: "Please enter a valid US phone number"
+          remote: "Please enter a valid US phone number"
   			}
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
         $rootScope.formData3 = $scope.formData;
-        // $http(
-        //     '/validate/validate/send',
-        //     {
-        //       source: $rootScope.formData1.source
-        //     }).success(function(data){
-        //       $scope.calculate();
-        //       $scope.conversion(1070276245,"Ls4OCOWhRhCVvaz-Aw");
-        //     }).error(function(e){console.log(e)});
+        $http(
+            '/validate/validate/send',
+            {
+              source: $rootScope.formData1.source
+            }).success(function(data){
+              $scope.calculate();
+              $scope.conversion(1070276245,"Ls4OCOWhRhCVvaz-Aw");
+            }).error(function(e){console.log(e)});
         
   			$state.go('/thank-you');
   		}
