@@ -9,7 +9,6 @@ var Ziphelp = function(element){
 	this.par = this.zf.parentNode;
 	this.input = $(this.par).find('input');
 	this.close = $(this.par).find('.close')[0];
-	console.log(this.close);
 
 	//ZipFinder clicked?
 	this.zf.isClicked = false;
