@@ -8,7 +8,10 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', '$state', function ($scope, $location, $rootScope, $http, $state) {
+  .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', '$state', '$window', function ($scope, $location, $rootScope, $http, $state, $window) {
+   
+    $scope.formData = {};
+    $scope.formData.source = window.location.href; // get url source 
 
   	$scope.validationOptions = {
   		rules: {
@@ -16,10 +19,10 @@ angular.module('bvl39App')
   				required: true,
   				minlength: 5,
   				maxlength: 5,
-          remote: {
-              type: 'post',
-              url: '/validate/validate/from-zipcode'
-          }
+          // remote: {
+          //     type: 'post',
+          //     url: '/validate/validate/from-zipcode'
+          // }
   			},
      
   		}, 
@@ -28,31 +31,21 @@ angular.module('bvl39App')
   				required: "Please enter in your zip code correctly",
   				minlength: "Must be 5 digits",
   				maxlength: "Cannot be more than 5 digits",
-          remote: "Please enter a valid zip code"
+          // remote: "Please enter a valid zip code"
   			}
   		},
   		errorElement: 'div',
   		submitHandler: function(){
 
-        $http.get('/validate/validate/')
-          .success(function(data){
-              console.log(data);
-
-              $scope.city = data.city.name;
-
-          })
-          .error(function(err){
-            console.log(err);
-          });
-          try{
-            _gaq.push(['_trackEvent', 'desktop', '999moving', 'step1-test39']);
-          }catch(e){}
+         // try{
+         //    _gaq.push(['_trackEvent', 'desktop', '999moving', 'step1-test39']);
+         //  }catch(e){}
   		  $rootScope.formData1 = $scope.formData;
   			$state.go('/step2');
   		
   		}
   	};
-    $scope.formData = {};
+
     $rootScope.howState = "step1";
     $rootScope.states = ['step1', 'step2', 'step3'];
     $rootScope.count = 0;
@@ -72,6 +65,4 @@ angular.module('bvl39App')
     var how = angular.element('.how')[0];
     how.style.marginTop = "409px";
 
-
-   
   }]);

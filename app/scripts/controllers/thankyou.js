@@ -12,7 +12,7 @@ angular.module('bvl39App')
  	
   	$scope.price1 = "999";
   	$scope.price2 = "9999";
-	$scope.loaded = false;
+	  $scope.loaded = false;
 
   	$scope.showPrice = function(){
   		$timeout(function(){
