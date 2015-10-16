@@ -15,36 +15,38 @@ angular.module('bvl39App')
   			from_zip: {
   				required: true,
   				minlength: 5,
-  				maxlength: 5
+  				maxlength: 5,
+          remote: {
+              type: 'post',
+              url: '/validate/validate/from-zipcode'
+          }
   			},
-        // remote: {
-        //     type: 'post',
-        //     url: '/validate/validate/from-zipcode'
-        // }
+     
   		}, 
   		messages: {
   			from_zip: {
   				required: "Please enter in your zip code correctly",
   				minlength: "Must be 5 digits",
-  				maxlength: "Cannot be more than 5 digits"
+  				maxlength: "Cannot be more than 5 digits",
+          remote: "Please enter a valid zip code"
   			}
   		},
   		errorElement: 'div',
   		submitHandler: function(){
 
-        // $http.get('/validate/validate/')
-        //   .success(function(data){
-        //       console.log(data);
+        $http.get('/validate/validate/')
+          .success(function(data){
+              console.log(data);
 
-        //       $scope.city = data.city.name;
+              $scope.city = data.city.name;
 
-        //   })
-        //   .error(function(err){
-        //     console.log(err);
-        //   });
-          // try{
-          //   _gaq.push(['_trackEvent', 'desktop', '999moving', 'step1-test37']);
-          // }catch(e){}
+          })
+          .error(function(err){
+            console.log(err);
+          });
+          try{
+            _gaq.push(['_trackEvent', 'desktop', '999moving', 'step1-test39']);
+          }catch(e){}
   		  $rootScope.formData1 = $scope.formData;
   			$state.go('/step2');
   		

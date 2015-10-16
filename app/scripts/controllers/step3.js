@@ -14,68 +14,77 @@ angular.module('bvl39App')
   		rules: {
   			first_name: {
   				required: true,
-          // remote: {
-          //     type: 'post',
-          //     url: '/validate/validate/firstname'
-          // }
+          remote: {
+              type: 'post',
+              url: '/validate/validate/firstname'
+          }
   			},
   			last_name: {
   				required: true,
-          // remote: {
-          //     type: 'post',
-          //     url: '/validate/validate/lastname'
-          // }
+          remote: {
+              type: 'post',
+              url: '/validate/validate/lastname'
+          }
   			},
   			email: {
   				required: true,
           email:true,
-          // remote: {
-          //   type: 'post',
-          //   url: '/validate/validate/email'
-          // }
+          remote: {
+            type: 'post',
+            url: '/validate/validate/email'
+          }
   			},
   			phone: {
   				required: true,
   				minlength:14,
   				maxlength:14,
-          // remote: {
-          //     type: 'post',
-          //     url: '/validate/validate/phone'
-          // }
+          remote: {
+              type: 'post',
+              url: '/validate/validate/phone'
+          }
   			}
 
   		}, 
   		messages: {
   			first_name: {
   				required: "Please enter your first name",
+          remote: "Please enter a valid first name"
   			},
   			last_name: {
   				required: "Please enter your last name",
+          remote: "Please enter a valid last name"
   			},
   			email: {
   				required: "Please enter your email address",
+          remote: "Please enter a valid email address"
   			},
   			phone: {
   				required: "Please enter your phone number",
   				minlength: "Phone number must be 10 digits",
-  				maxlength: "Phone number cannot be greater than 10 digits"
+  				maxlength: "Phone number cannot be greater than 10 digits",
+          remote: "Please enter a valid US phone number"
   			}
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
         $rootScope.formData3 = $scope.formData;
-        // $http(
-        //     '/validate/validate/send',
-        //     {
-        //       source: $('#source').val()
-        //     }).success(function(data){
-        //       $scope.calculate();
-        //       $scope.conversion(1070276245,"Ls4OCOWhRhCVvaz-Aw");
-        //     }).error(function(e){console.log(e)});
+        $http(
+            '/validate/validate/send',
+            {
+              source: $rootScope.formData1.source
+            }).success(function(data){
+              $scope.calculate();
+              $scope.conversion(1070276245,"Ls4OCOWhRhCVvaz-Aw");
+            }).error(function(e){console.log(e)});
         
   			$state.go('/thank-you');
   		}
   	};
+
+    $rootScope.messages = {
+      success: '',
+      error: 'Nothing happened'
+    };
 
     $scope.calculate = function(){
        
@@ -118,39 +127,22 @@ angular.module('bvl39App')
                 rooms = roomTable[rooms];
 
 
-                $http(
-                  '/validate/calculator/calc',
-                  {
-                    rooms: rooms,
-                    miles: test
-                  }).success(function(data){
-                    //console.log(data)
+                $http('/validate/calculator/calc',{ rooms: rooms, miles: test })
+                  .success(function(data){
+                    console.log(data)
                     var d = $.parseJSON(data);
-                    setTimeout(function(){
-                      //message
-                      $("#calculator").html('Your quote range is: <span class="thePrice">'+ '$' + d['self_service_small']['min'] + ' to $' + d['full_service_p_large']['max'] + '</span>');
-                      }
-                    , 2000);
-                  }).error(function(e){
-                      console.log(e);
+                    $rootScope.messages.success = 'Your quote range is: '+ '$' + d['self_service_small']['min'] + ' to $' + d['full_service_p_large']['max'];
+                  })
+                  .error(function(e){
+                      $rootScope.messages.error = 'There was a problem retrieving your quote from our database.  Please check back again later.';
                   });
                     
-              }catch(e){
-                setTimeout(
-                  function(){
-                    //message
-                    $("#calculator").html("There was an error trying to retrieve your quote.");
-                  }
-                , 3000);
-              }
+               }catch(e){
+                 $rootScope.messages.error = 'There was a problem retrieving your quote from our provider.  Please check back again later.';
+               }
             }
             else{
-              setTimeout(
-                function(){
-                  //message
-                  $("#calculator").html("Unable to calculate.  Zip codes requested may not be available for service.");
-                }
-              , 3000);
+                  $rootScope.messages.error = "Unable to calculate.  Zip codes requested may not be available for service.";
             }
           }
         };
@@ -169,26 +161,25 @@ angular.module('bvl39App')
         };
         
         calculateDistances();
-
       
     };
 
     $scope.conversion = function(google_conversion_id,google_conversion_label){
       try{
-        _gaq.push(['_trackEvent', 'desktop', '999moving', 'step3-test37']);
-        setTimeout(
+        _gaq.push(['_trackEvent', 'desktop', '999moving', 'step3-test39']);
+       $timeout(
           function(){
-            _gaq.push(['_trackEvent', 'Conversion', 'Landing-test37', 'Validate']);
+            _gaq.push(['_trackEvent', 'Conversion', 'Landing-test39', 'Validate']);
           }, 100
         );
         //__adroll.record_user({"adroll_segments": "quote_complete"});
         }catch(e){
-          //console.log(e);
+          console.log(e);
         }
         //google conversion script
         var image = new Image(1,1); 
         image.src = "http://www.googleadservices.com/pagead/conversion/"+google_conversion_id+"/?label="+google_conversion_label + "&script=0";
-        $('#mstag').attr('src','//flex.msn.com/mstag/tag/224166ee-2898-4858-ad70-bbad4fbe8c69/analytics.html?dedup=1&domainId=334508&type=1&revenue=&actionid=1320');
+        angular.element('#mstag').attr('src','//flex.msn.com/mstag/tag/224166ee-2898-4858-ad70-bbad4fbe8c69/analytics.html?dedup=1&domainId=334508&type=1&revenue=&actionid=1320');
     };
 
     $scope.formData = {};

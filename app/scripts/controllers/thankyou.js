@@ -16,8 +16,13 @@ angular.module('bvl39App')
 
   	$scope.showPrice = function(){
   		$timeout(function(){
-  			$scope.prices = "$"+ $scope.price1 + " to " + "$" + $scope.price2;
-  			$scope.loaded = true;
+        if($rootScope.messages.success != ""){
+          $scope.prices = $rootScope.messages.success;
+        }else {
+          $scope.prices = $rootScope.messages.error;
+        }
+
+        $scope.loaded = true;
 
   		}, 3000);
   	};
