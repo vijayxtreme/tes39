@@ -16,24 +16,24 @@ angular.module('bvl39App')
   				required: true,
   				minlength: 5,
   				maxlength: 5,
-          remote: {
-            type: 'post',
-            url: '/validate/validate/to-zipcode'
-          }
+          // remote: {
+          //   type: 'post',
+          //   url: '/validate/validate/to-zipcode'
+          // }
   			},
   			move_date: {
   				required: true,
-          remote: {
-            type: 'post',
-            url: '/validate/validate/movedate'
-          }          
+          // remote: {
+          //   type: 'post',
+          //   url: '/validate/validate/movedate'
+          // }          
   			},
   			move_size: {
   				required: true,
-          remote: {
-            type: 'post',
-            url: '/validate/validate/rooms'
-          }
+          // remote: {
+          //   type: 'post',
+          //   url: '/validate/validate/rooms'
+          // }
   			},
   		}, 
   		messages: {
@@ -41,7 +41,7 @@ angular.module('bvl39App')
   				required: "Please enter in your zip code correctly",
   				minlength: "Must be 5 digits",
   				maxlength: "Cannot be more than 5 digits",
-          remote: "Please enter a valid zip code"
+          // remote: "Please enter a valid zip code"
   			},
   			move_date: {
   				required: "Please select a date"
@@ -52,9 +52,9 @@ angular.module('bvl39App')
   		}, 
   		errorElement: 'div',
   		submitHandler: function(){
-          try{
-            _gaq.push(['_trackEvent', 'desktop', '999moving', 'step2-test39']);
-          }catch(e){}
+          // try{
+          //   _gaq.push(['_trackEvent', 'desktop', '999moving', 'step2-test39']);
+          // }catch(e){}
         $rootScope.formData2 = $scope.formData;
 
   			$state.go('/loader');

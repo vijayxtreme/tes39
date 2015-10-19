@@ -193,32 +193,41 @@ to prevent collapsing during animation*/
   top:0;
 }
 
+@keyframes fadeOutLeftBig {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: translateX(-2000px);
+	}
+}
+
 [ui-view].ng-enter, [ui-view].ng-leave {
   position: absolute;
   left: 0;
   right: 0;
-  -webkit-transition:all 0.5s ease-in-out;
-    -moz-transition:all 0.5s ease-in-out;
-    -o-transition:all 0.5s ease-in-out;
-    transition:all 0.5s ease-in-out;
+  animation-name: fadeOutLeftBig;
 }
 
-[ui-view].ng-enter {
-  left: 100%;
-  opacity:0;
-}
+// [ui-view].ng-enter {
+//   left: 100%;
+//   opacity:0;
+// }
 
-[ui-view].ng-enter-active {
-  opacity: 1;
+// [ui-view].ng-enter-active {
+//   opacity: 1;
 
-}
+// }
 
-[ui-view].ng-leave {
-  opacity: 1; 
-  left: 0;
-}
+// [ui-view].ng-leave {
+//   opacity: 1; 
+//   left: 0;
+// }
 
-[ui-view].ng-leave-active {
-	opacity: 0;
-  left: -100%;
-}
+// [ui-view].ng-leave-active {
+// 	opacity: 0;
+//   left: -100%;
+// }

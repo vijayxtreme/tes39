@@ -23,10 +23,10 @@ angular.module('bvl39App')
   				required: true,
   				minlength: 5,
   				maxlength: 5,
-          remote: {
-              type: 'post',
-              url: '/validate/validate/from-zipcode'
-          }
+          // remote: {
+          //     type: 'post',
+          //     url: '/validate/validate/from-zipcode'
+          // }
   			},
      
   		}, 
@@ -35,15 +35,15 @@ angular.module('bvl39App')
   				required: "Please enter in your zip code correctly",
   				minlength: "Must be 5 digits",
   				maxlength: "Cannot be more than 5 digits",
-          remote: "Please enter a valid zip code"
+          // remote: "Please enter a valid zip code"
   			}
   		},
   		errorElement: 'div',
   		submitHandler: function(){
 
-         try{
-            _gaq.push(['_trackEvent', 'desktop', '999moving', 'step1-test39']);
-          }catch(e){}
+         // try{
+         //    _gaq.push(['_trackEvent', 'desktop', '999moving', 'step1-test39']);
+         //  }catch(e){}
   		  $rootScope.formData1 = $scope.formData;
   			$state.go('/step2');
         //Lazy load google maps
