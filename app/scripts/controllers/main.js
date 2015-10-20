@@ -8,8 +8,9 @@
  * Controller of the bvl39App
  */
 angular.module('bvl39App')
-  .controller('MainCtrl', ['$scope', '$window', function ($scope, $window) {
+  .controller('MainCtrl', ['$scope', '$window', '$rootScope', function ($scope, $window, $rootScope) {
 	  $scope.open = function(link){
 	     $window.open(link, "", "width=350,height=550");
 	  }; 
+	  $rootScope.mapsLoaded = false;
   }]);

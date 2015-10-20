@@ -10,9 +10,13 @@
 angular.module('bvl39App')
   .controller('slide1Ctrl', ['$scope', '$location', '$rootScope', '$http', '$state', '$window', '$timeout', function ($scope, $location, $rootScope, $http, $state, $window, $timeout) {
 
-    $timeout(function(){
-      $.getScript('http://maps.googleapis.com/maps/api/js?key=AIzaSyAOAFjKE8xQUWxlVds1COiroKVmYjH8SoM&libraries=places&sensor=true&callback=window.googleMapsLoaded');   
-    }, 1000);
+    if($rootScope.mapsLoaded === false){
+      $timeout(function(){
+        $.getScript('http://maps.googleapis.com/maps/api/js?key=AIzaSyAOAFjKE8xQUWxlVds1COiroKVmYjH8SoM&libraries=places&sensor=true&callback=window.googleMapsLoaded');   
+
+      }, 1000);
+      $rootScope.mapsLoaded = true; // prevent reloading google maps over and over if someone clicks back
+    }
 
     $scope.formData = {};
     $scope.formData.source = window.location.href; // get url source 
